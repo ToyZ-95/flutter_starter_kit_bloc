@@ -9,10 +9,15 @@ moveToLoginScreen({required BuildContext context}) {
   );
 }
 
-moveToHomeScreen({required BuildContext context}) {
+moveToHomeScreen(
+    {required BuildContext context,
+    dynamic Function(dynamic)? revertCallback}) {
   context.operation(
     operation: NavigationOperations.pushReplacementNamed,
     routeScreen: RouteScreens.homeScreen,
+    revertCallback: (dynamic data) {
+      revertCallback?.call(data);
+    },
   );
 }
 
@@ -20,5 +25,17 @@ moveToBaseModuleScreen({required BuildContext context}) {
   context.operation(
     operation: NavigationOperations.pushReplacementNamed,
     routeScreen: RouteScreens.baseModule,
+  );
+}
+
+moveToDetailsScreen(
+    {required BuildContext context,
+    dynamic Function(dynamic)? revertCallback}) {
+  context.operation(
+    operation: NavigationOperations.pushNamed,
+    routeScreen: RouteScreens.details,
+    revertCallback: (dynamic data) {
+      revertCallback?.call(data);
+    },
   );
 }

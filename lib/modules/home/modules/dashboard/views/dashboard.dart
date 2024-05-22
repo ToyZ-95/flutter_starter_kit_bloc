@@ -53,18 +53,6 @@ class _DashboardState extends State<Dashboard> {
               );
             },
           );
-
-          // return ListView.separated(
-          //   itemCount: state.products.length,
-          //   separatorBuilder: (BuildContext context, int index) {
-          //     return HeightBox(20.h);
-          //   },
-          //   itemBuilder: (BuildContext context, int index) {
-          //     return ProductCard(
-          //       productModel: state.products[index],
-          //     );
-          //   },
-          // );
         },
       ),
     );

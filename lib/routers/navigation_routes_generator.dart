@@ -2,6 +2,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:starter_kit_bloc/configurations/app_configurations.dart';
 import 'package:starter_kit_bloc/enums/enums.dart';
+import 'package:starter_kit_bloc/modules/details/views/details.dart';
 import 'package:starter_kit_bloc/modules/home/views/home_screen.dart';
 import 'package:starter_kit_bloc/modules/login/views/login.dart';
 import 'package:starter_kit_bloc/modules/splash/views/splash_screen.dart';
@@ -43,6 +44,13 @@ class NavigationRoutesGenerator {
         return MaterialPageRoute(
           builder: (BuildContext context) {
             return const HomeScreen();
+          },
+        );
+
+      case RouteScreens.details:
+        return MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const Details();
           },
         );
     }

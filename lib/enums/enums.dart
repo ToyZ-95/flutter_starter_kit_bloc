@@ -11,6 +11,7 @@ enum RouteScreens {
   login,
   baseModule,
   homeScreen,
+  details,
 }
 
 enum PaginableListViewLastItem {
